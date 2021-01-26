@@ -1,0 +1,4 @@
+service_router/lib/City.o
+service_router/lib/libcity.a
+predictor_client/client_demo
+predictor_client/demo/client_retrieval_demo

@@ -1,0 +1,53 @@
+{
+  "msg": {
+    "services": [
+      {
+        "model_records": [
+          {
+            "success_time": "20191009_121843",
+            "fullName": "tf_xfea_estimator_v0_ocpx_ctr_realimp-20190902_133108",
+            "configName": "/home/maolei/w/experimental/predictor_model_service_runtime/data/tf_xfea_estimator_v0_ocpx_ctr_realimp-20190902_133108/tf_xfea_estimator_v0_ocpx_ctr_realimp.json",
+            "name": "tf_xfea_estimator_v0_ocpx_ctr_realimp",
+            "timestamp": "20190902_133108",
+            "md5": "b1b2c3d4e5h8_new_model",
+            "state": "loaded"
+          }
+        ],
+        "service_name": "predictor_server_dev_maolei"
+      },
+      {
+        "model_records": [
+          {
+            "success_time": "20191009_121846",
+            "fullName": "llearner_lrfea_v0_addfea_guide_ctr_ftrl-20190712_103100",
+            "configName": "/home/maolei/w/experimental/predictor_model_service_runtime/data/llearner_lrfea_v0_addfea_guide_ctr_ftrl-20190712_103100/llearner_lrfea_v0_addfea_guide_ctr_ftrl.json",
+            "name": "llearner_lrfea_v0_addfea_guide_ctr_ftrl",
+            "timestamp": "20190712_103100",
+            "md5": "a1b2c3d4e5f9",
+            "state": "loaded"
+          },
+          {
+            "success_time": "20191009_121852",
+            "fullName": "llearner_lrfea_v0_addfea_read_ctr_ftrl-20190926_103655",
+            "configName": "/home/maolei/w/experimental/predictor_model_service_runtime/data/llearner_lrfea_v0_addfea_read_ctr_ftrl-20190926_103655/llearner_lrfea_v0_addfea_read_ctr_ftrl.json",
+            "name": "llearner_lrfea_v0_addfea_read_ctr_ftrl",
+            "timestamp": "20190926_103655",
+            "md5": "a1b2c3d4e5f9_new_model",
+            "state": "loaded"
+          },
+          {
+            "success_time": "20191009_121846",
+            "fullName": "llearner_lrfea_v0_addfea_social_ctr_ftrl-20190925_153000",
+            "configName": "/home/maolei/w/experimental/predictor_model_service_runtime/data/llearner_lrfea_v0_addfea_social_ctr_ftrl-20190925_153000/llearner_lrfea_v0_addfea_social_ctr_ftrl.json",
+            "name": "llearner_lrfea_v0_addfea_social_ctr_ftrl",
+            "timestamp": "20190925_153000",
+            "md5": "a1b2c3d4e5f9_update",
+            "state": "loaded"
+          }
+        ],
+        "service_name": "predictor_superfans_server_dev_maolei"
+      }
+    ]
+  },
+  "code": 0
+}

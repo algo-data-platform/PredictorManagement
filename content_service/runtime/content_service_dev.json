@@ -1,0 +1,103 @@
+{
+  "localIp": "LOCAL_IP",
+  "stage": "prod",
+  "httpPort": "10018",
+  "dingDingWebhookUrl": "https://oapi.dingtalk.com/robot/send?access_token=",
+  "enalbleRouterService": true,
+  "log": {
+    "fileName": "/tmp/content_service.log",
+    "level": "info",
+    "isRotate": true,
+    "rotateCycle": "day",
+    "rotateMaxHours": 72
+  },
+  "db": { 
+    "driver": "sqlite3", 
+    "host": "", 
+    "port": "", 
+    "user": "", 
+    "passwd": "", 
+    "name": "./init_test_db/ad_test_db.db" 
+ },
+ "services": [ 
+    "p2pModelService", 
+    "cleaningService", 
+    "validateService", 
+    "hdfsService", 
+    "fileSyncService" 
+ ],
+  "p2pModelService": {
+    "runInterval": 30,
+    "targetService": {
+      "httpPort": "10028"
+    },
+    "srcHost": "127.0.0.125",
+    "srcPath": "model_service",
+    "destHost": "",
+    "destPath": "./../predictor_platform/server/runtime/data",
+    "predictorStaticListDir": "predictor_static_ip_list",
+    "retry": 1,
+    "rsyncBWLimit": 40000,
+    "srcRsyncBWLimit": 200000,
+    "peerLimit": 10, 
+    "servicePullAlertLimit": 8,
+    "modelPullMaxLimit": 16
+  },
+  "cleaningService": {
+    "runInterval": 600,
+    "versionsToKeep": 3,
+    "versionsToKeepForValidate": 4,
+    "hoursToKeep": 48
+  },
+  "validateService": {
+    "host": "127.2.12.125",
+    "retryInterval": 10,
+    "retryTimes": 12,
+    "maxSampleCount": 10000,
+    "predictorTimeout": 10,
+    "consulAddress": "127.0.0.124:80",
+    "serviceName": "algo_service_consistence",
+    "htmlTemplateDir": "./html",
+    "summaryResultDir": "./data",
+    "algoLogDir": "/tmp/collect/algo_service",
+    "algoLogBaseUrl": "http://127.2.12.125:8081/validate_log/algo_service/",
+    "reportRecipients": [
+    ]
+  },
+  "hdfsService": {
+    "runInterval": 10,
+    "host": "127.2.12.125",
+    "destPath": "/tmp/algo_service/data/",
+    "rsyncBWLimit": 40000,
+    "transmitHost": "127.0.0.125",
+    "transmitPath": "model_service"
+  },
+  "fileSyncService": {
+		"runInterval":            120,
+		"retryTimes":             1,
+		"rsyncBWLimit":           40000,
+		"srcRsyncBWLimit":        200000,
+		"srcHost":                "127.0.0.125",
+		"srcPath":                "model_service",
+		"destPath":               "/tmp/algo_service/data/",
+		"syncTimesLimit":         8,
+		"predictorStaticListDir": "predictor_static_ip_list"
+	},
+  "alert": {
+    "rate": 300,
+    "recipients": [
+    ]
+  },
+  "stressTestService":{
+    "servicename": "predicter_service_QA"
+  },
+  "regressionService": {
+    "host": [
+      "127.5.96.155",
+      "127.5.96.154"
+    ],
+    "scriptPath": "./scripts/",
+    "packetName": "",
+    "sleepTime": 5
+  }
+}

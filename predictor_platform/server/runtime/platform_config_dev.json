@@ -1,0 +1,97 @@
+{
+  "log": {
+    "fileName": "/tmp/algo_platform.log",
+    "level": "debug",
+    "isRotate": true,
+    "rotateCycle": "day",
+    "rotateMaxHours": 72
+  },
+  "http_host" : "LOCAL_IP",
+  "http_port" : "10008",
+  "http_timeout" : "1000",
+  "http_retry_conn" : "3",
+  "predictor_http_port": "10028",
+  "model_timing_range": -7,
+  "username_email": "",
+  "passwd_email": "",
+  "host_email" : "",
+  "from_email" : "",
+  "email_cron_time" : "09:30:00",
+  "cron_tab_ip" : "LOCAL_IP",
+  "html_template_path" : "./html/model_daily_timing_info.tpl",
+  "data_dir": "./data",
+  "recipients": [
+   
+  ],  
+  "mysql" : {
+    "driver": "sqlite3",
+    "host": "",
+    "port": "",
+    "user": "",
+    "passwd": "",
+    "database": "./init_test_db/ad_test_db.db", 
+    "tables": [
+      "hosts",
+      "services",
+      "models",
+      "host_services",
+      "service_models",
+      "model_histories",
+      "configs",
+      "service_configs"
+    ],
+    "alarm_list": [
+    ]
+  },
+  "monitor": {
+    "checkInterval" : 60,
+    "excludedServices" : [
+      "algo_service_consistence"
+    ]
+  },
+  "run_env" : "prod",
+  "model_transmit" : {
+    "srcHost": "127.0.0.125",
+    "srcPath": "model_service"
+  },
+  "elastic_expansion" : {
+    "checkInterval": 20,
+    "service_groups": [
+      {
+        "services":["service_1"]
+      },
+      {
+        "services":["service_2"]
+      },
+      {
+        "services":["service_3"]
+      }
+    ]
+  },
+  "load_threshold": {
+    "cpuLimit": 0.02,
+    "checkinterval":60,
+    "metheod" : "once",
+    "up_gap": 500,
+    "down_gap": 100
+  },
+  "service_static_list": {
+    "updateInterval": 300,
+    "adServerRelayHost": "127.0.0.124::tmp/",
+    "predictorRelayHost": "127.0.0.125::test_model_service/",
+    "subDataDir": "predictor_static_ip_list"
+  },
+  "predictor_client":{
+    "consul_address" : "127.0.0.123:8500"
+  },
+  "stress_test_service" : "predicter_service_QA",
+  "consistence_service" : "algo_service_consistence",
+  "prometheus":{
+    "address": "prometheus_host"
+  },
+  "migrate_hosts" :{
+    "exclude_hosts" :[
+      
+    ]
+  }
+}
