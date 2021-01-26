@@ -5,27 +5,26 @@
 - Predictor_platform 为预测服务的开放平台，用来对模型，服务，机器，权重，线程池，模型负责人等进行简单的可视化配置，查看服务模型加载状态，机器状态。同时支持包括集群调整，自动压测，自动权重，一键降级等控制功能。
 
 ## Get Started - Clone the repo
-### 1.clone predictormanagement repo
+### 1.clone PredictorManagement repo
 ```sh
-$ git clone http://github.com/algo-data-platform/PredictorService.git
-$ cd runtime/
+$ git clone https://github.com/algo-data-platform/PredictorManagement.git
 ```
 ### 2.start predictor service
 ```sh
-$ git clone http://github.com/algo-data-platform/Predictorservice.git
+$ git clone https://github.com/algo-data-platform/Predictorservice.git
 $ cd PredictorService/runtime
 $ sh ./start_predictor.sh
 ```
 
 ## Get Started - Build Predictor_platform
 ### 1. init test db
-(assuming you are at the repo base dir: `predictormanagement/`)
+(assuming you are at the repo base dir: `PredictorManagement/`)
 ```sh
 $ cd predictor_platform
 $ sh ./init_test_db.sh
 ```
 ### 2. build
-(assuming you are at the repo base dir: `predictormanagement/`)
+(assuming you are at the repo base dir: `PredictorManagement/`)
 ```sh
 $ cd predictor_platform
 $ sh ./build.sh
@@ -33,7 +32,7 @@ $ sh ./build.sh
 
 ## Get Started - Run Predictor_platform
 ### 1. start
-(assuming you are at the repo base dir: `predictormanagement/`)
+(assuming you are at the repo base dir: `PredictorManagement/`)
 ```sh
 $ cd predictor_platform/server
 $ sh ./run.sh
@@ -47,14 +46,14 @@ password: admin
 
 ## Get Started - Build Content_service
 ### 1. build
-(assuming you are at the repo base dir: `predictormanagement/`)
+(assuming you are at the repo base dir: `PredictorManagement/`)
 ```sh
 $ cd content_serivce
 $ sh ./build.sh
 ```
 ## Get Started - Run Content_service
 ### 1. start content service
-(assuming you are at the repo base dir: `predictormanagement/`)
+(assuming you are at the repo base dir: `PredictorManagement/`)
 ```sh
 $ cd content_serivce/
 $ sh ./run.sh
